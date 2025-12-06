@@ -137,17 +137,6 @@ export default function Login() {
               </Link>
             </p>
           </form>
-
-          {/* Demo credentials box */}
-          <div className="mt-6 rounded-2xl bg-slate-50 px-4 py-3 text-xs text-slate-600">
-            <p className="font-semibold text-slate-800">Demo Credentials:</p>
-            <p className="mt-1">
-              Email: <span className="font-mono">demo@fitbloom.com</span>
-            </p>
-            <p>
-              Password: <span className="font-mono">demo123</span>
-            </p>
-          </div>
         </div>
       </div>
     </main>

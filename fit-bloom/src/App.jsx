@@ -54,9 +54,6 @@ function AppContent() {
   return (
     <>
       <ScrollToTop />
-
-      {/* Hide Navbar/Footer on auth pages */}
-      {/* {!isAuthPage && <Navbar />} */}
       <Navbar />
 
       <Routes>
