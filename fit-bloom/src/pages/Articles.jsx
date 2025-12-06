@@ -284,18 +284,6 @@ const Articles = () => {
                                                 </button>
                                             </div>
                                         )}
-
-                                        {/* Link Button for Users */}
-                                        {!doctor && (
-                                            <a
-                                                href={article.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="ml-auto text-emerald-500 hover:text-emerald-600 font-semibold text-sm"
-                                            >
-                                                Read More →
-                                            </a>
-                                        )}
                                     </div>
                                     <div className='pt-4 flex items-center' >
                                         <a href={article.link} target='_blank'>

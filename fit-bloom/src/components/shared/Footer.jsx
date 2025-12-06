@@ -4,27 +4,27 @@ import { Instagram, Twitter, Facebook, Mail, Leaf } from 'lucide-react';
 export default function Footer() {
   const footerLinks = {
     company: [
-      { name: 'About', href: '#' },
-      { name: 'Articles', href: '#' },
-      { name: 'Contact', href: '#' }
+      { name: 'About', href: '/about' },
+      { name: 'Articles', href: '/articles' },
+      { name: 'Contact', href: '/contact' }
     ],
     services: [
-      { name: 'Consultations', href: '#' },
-      { name: 'Goal Tracking', href: '#' },
-      { name: 'Nutrition Plans', href: '#' }
+      { name: 'Consultations', href: '/consultations' },
+      { name: 'Goal Tracking', href: '/goals' },
+      { name: 'Nutrition Plans', href: '/consultations' }
     ],
     legal: [
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'Terms of Service', href: '#' },
-      { name: 'Cookie Policy', href: '#' }
+      { name: 'Privacy Policy', href: '' },
+      { name: 'Terms of Service', href: '' },
+      { name: 'Cookie Policy', href: '' }
     ]
   };
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Mail, href: '#', label: 'Email' }
+    { icon: Instagram, href: '/contact', label: 'Instagram' },
+    { icon: Twitter, href: '/contact', label: 'Twitter' },
+    { icon: Facebook, href: '/contact', label: 'Facebook' },
+    { icon: Mail, href: '/contact', label: 'Email' }
   ];
 
   return (

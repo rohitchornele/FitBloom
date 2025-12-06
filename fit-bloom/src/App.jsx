@@ -28,9 +28,10 @@ const AUTH_PAGES = ["/login", "/signup", "/admin/dashboard", "/admin/register", 
 function AppContent() {
   const [showPopup, setShowPopup] = useState(false);
   const location = useLocation();  // <-- GET CURRENT PATH
+  const STORAGE_KEY = "fitbloom_newyear_popup_closed_2026";
 
   useEffect(() => {
-    // const closed = localStorage.getItem(STORAGE_KEY) === "true";
+    const closed = localStorage.getItem(STORAGE_KEY) === "true";
     if (!closed) {
       const t = setTimeout(() => setShowPopup(true), 800);
       return () => clearTimeout(t);

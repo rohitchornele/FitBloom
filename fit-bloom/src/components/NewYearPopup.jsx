@@ -7,6 +7,18 @@ const STORAGE_KEY = "fitbloom_newyear_popup_closed_2026";
 export default function NewYearPopup({ isOpen, onClose }) {
   const navigate = useNavigate();
 
+  function setWithExpiry(key, value, ttl) {
+  const now = new Date();
+
+  const item = {
+    value: value,
+    expiry: now.getTime() + ttl, // ttl in milliseconds
+  };
+
+  localStorage.setItem(key, JSON.stringify(item));
+}
+
+
   // Close on ESC
   useEffect(() => {
     if (!isOpen) return;
@@ -20,9 +32,11 @@ export default function NewYearPopup({ isOpen, onClose }) {
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
+  
 
   const handleClose = () => {
-    localStorage.setItem(STORAGE_KEY, "true");
+    setWithExpiry(STORAGE_KEY, true, 10 * 60 * 1000);
+    // localStorage.setItem(STORAGE_KEY, "true");
     onClose();
   };
 
