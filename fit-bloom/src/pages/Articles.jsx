@@ -3,8 +3,11 @@ import { Clock, Plus, Edit3, Trash2, ArrowRight } from 'lucide-react';
 import { useDoctorAuth } from '../context/DoctorAuthContext';
 import api from '../api/doctorClient.js';
 import CreateArticle from '../components/CreateArticle.jsx';
+import axios from 'axios';
 
 const Articles = () => {
+
+    const BASE_URL = import.meta.env.VITE_API_URL ||  "http://localhost:4000/api"
     const [activeCategory, setActiveCategory] = useState('All');
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -37,7 +40,7 @@ const Articles = () => {
                 const data = response.data.articles || [];
                 mapArticles(data);
             } else {
-                response = await fetch('http://localhost:4000/api/public/articles', {
+                response = await fetch(`${BASE_URL}/public/articles`, {
                     method: 'GET',
                     headers: { 'Content-Type': 'application/json' },
                 });
@@ -46,7 +49,7 @@ const Articles = () => {
                 mapArticles(data);
             }
         } catch (err) {
-            console.error('❌ Failed:', err);
+            console.error('Failed:', err);
             setError(err.message);
         } finally {
             setLoading(false);

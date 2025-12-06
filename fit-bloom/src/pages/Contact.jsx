@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, UserCheck, Loader2 } from 'lucide-react';
-import api from '../api/client'; // Add your API client import
+import api from '../api/client'; 
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ export default function Contact() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Fetch doctor data on mount
+  
   useEffect(() => {
     let cancelled = false;
     
@@ -53,7 +53,6 @@ export default function Contact() {
     alert('Message sent successfully!');
   };
 
-  // Dynamic contact info from doctor data + fallbacks
   const contactInfo = [
     {
       icon: Mail,
@@ -118,30 +117,6 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Doctor Contact Information */}
           <div>
-            {/* <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                {doctor?.image ? (
-                  <img
-                    src={doctor.image}
-                    alt={doctor.name}
-                    className="w-12 h-12 rounded-lg object-cover"
-                  />
-                ) : (
-                  <span className="text-xl font-semibold text-emerald-600">
-                    {doctor?.name?.charAt(0)?.toUpperCase() || "Dr"}
-                  </span>
-                )}
-              </div>
-              <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                  {doctor?.name || "Dr. [Name]"}
-                </h2>
-                <p className="text-emerald-600 font-semibold">
-                  {doctor?.title || "Nutrition Specialist"}
-                </p>
-              </div>
-            </div> */}
-
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Contact Information
             </h3>

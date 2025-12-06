@@ -1,7 +1,11 @@
 import React from 'react';
 import { ArrowRight, Heart, Activity } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
+  
+  const navigate = useNavigate();
+
   return (
     <section className="bg-linear-to-br from-emerald-100 via-pink-50 to-pink-50 px-6 py-20 min-h-screen">
       <div className="max-w-7xl mx-auto mb-20">
@@ -33,11 +37,11 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <button className="bg-emerald-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-emerald-600 transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
+              <button onClick={() => navigate("/login")} className="bg-emerald-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-emerald-600 transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
                 Start Your Journey
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="bg-emerald-100 text-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-emerald-500 hover:text-white transition-all border border-gray-200">
+              <button onClick={() => navigate("/signup")}  className="bg-emerald-100 text-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-emerald-500 hover:text-white transition-all border border-gray-200">
                 Learn More
               </button>
             </div>
