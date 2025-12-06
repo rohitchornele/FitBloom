@@ -15,13 +15,13 @@ import NewYearPopup from './components/NewYearPopup'
 import ProfileSettingsPage from './pages/ProfileSettingsPage'
 import ScrollToTop from './components/ScrollToTop'
 import Login from './pages/Login'
-import Signup from './pages/SignUp'
 import ProtectedRoute from './components/ProtectedRoute'
 import ProtectedDoctorRoute from './components/ProtectedDoctorRoute'
 import AdminDashboard from './pages/AdminDashboard'
 import AdminLogin from './pages/AdminLogin'
 import AdminRegister from './pages/AdminRegister'
 import Appointments from './pages/Appointments'
+import Signup from './pages/Signup'
 
 const AUTH_PAGES = ["/login", "/signup", "/admin/dashboard", "/admin/register", "/admin", "/doctor/appointments",];
 
