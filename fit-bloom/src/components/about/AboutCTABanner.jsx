@@ -1,7 +1,10 @@
 
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AboutCtaBanner() {
+
+  const navigate = useNavigate();
   return (
     <section className="bg-[#fbfcf8] py-16">
       <div className="mx-auto max-w-6xl px-4">
@@ -15,11 +18,11 @@ export default function AboutCtaBanner() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <button onClick={""} className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold text-emerald-600 shadow-sm hover:bg-emerald-50">
+            <button onClick={() => navigate('/consultations')} className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold text-emerald-600 shadow-sm hover:bg-emerald-50">
               Get Started
               <span className="text-lg leading-none">→</span>
             </button>
-            <button className="inline-flex items-center gap-2 rounded-full border border-emerald-100/70 bg-transparent px-7 py-3 text-sm font-semibold text-white hover:bg-emerald-500/40">
+            <button onClick={() => navigate('/contact')}  className="inline-flex items-center gap-2 rounded-full border border-emerald-100/70 bg-transparent px-7 py-3 text-sm font-semibold text-white hover:bg-emerald-500/40">
               Have Questions?
             </button>
           </div>

@@ -21,7 +21,7 @@ export default function CTASection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
-          <button onClick={() => navigate("/login")} className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all flex items-center gap-2 shadow-lg">
+          <button onClick={() => navigate("/consultations")} className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all flex items-center gap-2 shadow-lg">
             Get Started Free
             <ArrowRight className="w-5 h-5" />
           </button>
