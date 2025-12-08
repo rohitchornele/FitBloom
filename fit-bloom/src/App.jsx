@@ -30,13 +30,13 @@ function AppContent() {
   const location = useLocation();  // <-- GET CURRENT PATH
   const STORAGE_KEY = "fitbloom_newyear_popup_closed_2026";
 
-  useEffect(() => {
-    const closed = localStorage.getItem(STORAGE_KEY) === "true";
-    if (!closed) {
-      const t = setTimeout(() => setShowPopup(true), 800);
-      return () => clearTimeout(t);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const closed = localStorage.getItem(STORAGE_KEY) === "true";
+  //   if (!closed) {
+  //     const t = setTimeout(() => setShowPopup(true), 800);
+  //     return () => clearTimeout(t);
+  //   }
+  // }, []);
 
   const isAuthPage = AUTH_PAGES.includes(location.pathname);
 
@@ -95,7 +95,7 @@ function AppContent() {
       {/* Hide Footer on auth pages */}
       {!isAuthPage && <Footer />}
 
-      <NewYearPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
+      {/* <NewYearPopup isOpen={showPopup} onClose={() => setShowPopup(false)} /> */}
     </>
   );
 }
