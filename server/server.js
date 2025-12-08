@@ -10,7 +10,6 @@ import publicArticlesRoute from "./routes/publicArticles.js";
 import doctorArticlesRoute from "./routes/doctorArticles.js";
 
 
-// import dotenv from 'dotenv'
 
 const app = express();
 

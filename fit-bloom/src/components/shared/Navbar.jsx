@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ChevronDown, UserCircle, LogOut, Leaf, Stethoscope, FileText } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
-import { useDoctorAuth } from "../../context/DoctorAuthContext"; // ✅ Doctor context
+import { useDoctorAuth } from "../../context/DoctorAuthContext";
 
 const publicNavLinks = [
   { label: "Home", to: "/" },
